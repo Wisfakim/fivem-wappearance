@@ -202,6 +202,7 @@ export interface CustomizationConfig {
   faceFeatures: boolean;
   headOverlays: boolean;
   components: boolean;
+  masks : boolean;
   props: boolean;
   tattoos: boolean;
   allowExit: boolean;

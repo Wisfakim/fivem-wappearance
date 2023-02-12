@@ -46,26 +46,6 @@ const Components = ({
 
   return (
     <Section title={locales.components.title}>
-      <Item title={locales.components.mask}>
-        <FlexWrapper>
-          <Input
-            title={locales.components.drawable}
-            min={settingsById[1].drawable.min}
-            max={settingsById[1].drawable.max}
-            defaultValue={componentsById[1].drawable}
-            clientValue={storedComponentsById[1].drawable}
-            onChange={value => handleComponentDrawableChange(1, value)}
-          />
-          <Input
-            title={locales.components.texture}
-            min={settingsById[1].texture.min}
-            max={settingsById[1].texture.max}
-            defaultValue={componentsById[1].texture}
-            clientValue={storedComponentsById[1].texture}
-            onChange={value => handleComponentTextureChange(1, value)}
-          />
-        </FlexWrapper>
-      </Item>
       <Item title={locales.components.upperBody}>
         <FlexWrapper>
           <Input

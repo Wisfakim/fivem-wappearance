@@ -37,6 +37,7 @@ import Modal from '../Modal';
 import Tattoos from './Tattoos';
 
 import { Wrapper, Container } from './styles';
+import Masks from './Masks';
 
 if (!import.meta.env.PROD) {
   mock('appearance_get_settings_and_data', () => ({
@@ -554,6 +555,16 @@ const Appearance = () => {
                       handleComponentDrawableChange={handleComponentDrawableChange}
                       handleComponentTextureChange={handleComponentTextureChange}
                     />
+                  )}
+                  {
+                    config.masks && (
+                      <Masks
+                        settings={appearanceSettings.components}
+                        data={data.components}
+                        storedData={storedData.components}
+                        handleComponentDrawableChange={handleComponentDrawableChange}
+                        handleComponentTextureChange={handleComponentTextureChange}
+                        />
                   )}
                   {config.props && (
                     <Props
